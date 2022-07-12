@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/ongzhixian/BasicPuppeteerApp#readme",
   "dependencies": {
-    "puppeteer": "^14.4.0"
+    "puppeteer": "^14.4.1"
   }
 }
