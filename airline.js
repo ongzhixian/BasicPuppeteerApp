@@ -13,16 +13,14 @@ var log = function(message) {
 //     console.log(err);
 // });
 
-
 log("Start");
 
 const puppeteer = require('puppeteer');
 const headlessMode = true; // set to true (default) if you want to run the browser without a GUI
 const debugging = false;
 
-var fresult = {};
 
-(async (fresult) => {
+(async () => {
     const browser = await puppeteer.launch({
         headless: headlessMode, 
         devtools: debugging,
@@ -43,16 +41,42 @@ var fresult = {};
     // await page.goto('https://www.iata.org/en/publications/directories/code-search/');
     await page.goto('https://www.iata.org/en/publications/directories/code-search/?airline.page=5&airline.search=');
 
-    // await page.waitForNavigation({waitUntil: 'networkidle0'});
-
+    // There is something wrong with the page; it does not load properly and and there's a constant AJAX requests.
     // try {
+    //      await page.waitForNavigation({waitUntil: 'networkidle0'});
     //     await page.waitForNavigation({ waitUntil: 'load' });
     // } catch (error) {
     //     console.log('ya some error occured');
     // }
 
+    // airlinecodessearchblock  
+    // await page.waitForSelector('table.datatable');
 
-    await page.waitForSelector('table.datatable');
+    await page.waitForSelector('div.airlinecodessearchblock');
+
+    // We want to know number of records 
+    const numRecords = await page.evaluate(() => {
+
+        let expectedAirlineCodesCount = -1;
+
+        // Find the element that contains the number of records
+        let checkElement = document.querySelector("div.airlinecodessearchblock p.registry-result-text");
+        
+        if (!checkElement)
+            return expectedAirlineCodesCount;
+        
+        
+        // Otherwise, we have element and we expect the innerText to have a format like 'Found 1126 Airline Codes'
+        let textRegex = /Found (\d*) Airline Codes/;
+        let matches = checkElement.innerText.match(textRegex);
+
+        if (matches)
+            return matches[1];
+        
+        return expectedAirlineCodesCount;
+    });
+
+    console.log(numRecords);
     
     let data = await page.evaluate(() => {
 
@@ -64,8 +88,6 @@ var fresult = {};
         console.log(`Number of datatables: ${datatables.length}`);
 
         let airline_datatable = datatables[0];
-
-        // console.log(airline_datatable);
 
         let header_element_names = [];
         let expected_header_element_names = [
@@ -146,12 +168,6 @@ var fresult = {};
     
     // await page.screenshot({ path: './screendumps/dias.png' });
 
-
     console.log("Close browser.");
     await browser.close();
-})(fresult).then((a) => {
-    console.log(a);
-});
-
-// log(fresult);
-// debugger;
+})();
