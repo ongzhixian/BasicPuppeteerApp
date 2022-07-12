@@ -2,9 +2,10 @@
 
 const fs = require('fs');
 const {EOL} = require('os');
+const { parse } = require('path');
 
 var log = function(message) {
-    fs.writeFile('airline.log', `${message}${EOL}`, { flag: 'w' }, _err=>{ /** Do nothing */});
+    fs.writeFile('airline.log', `${message}${EOL}`, { flag: 'a' }, _err=>{ /** Do nothing */});
 }
 
 // KIV: The idea here is to create a function that does logging using writestreams (using a readstream as a intermediary).
@@ -18,6 +19,7 @@ log("Start");
 const puppeteer = require('puppeteer');
 const headlessMode = true; // set to true (default) if you want to run the browser without a GUI
 const debugging = false;
+
 
 
 (async () => {
@@ -38,8 +40,8 @@ const debugging = false;
     // 1. Go to page (and wait for page to load)
     // 2. Get information on page
 
-    // await page.goto('https://www.iata.org/en/publications/directories/code-search/');
-    await page.goto('https://www.iata.org/en/publications/directories/code-search/?airline.page=5&airline.search=');
+    await page.goto('https://www.iata.org/en/publications/directories/code-search/');
+    //await page.goto('https://www.iata.org/en/publications/directories/code-search/?airline.page=5&airline.search=');
 
     // There is something wrong with the page; it does not load properly and and there's a constant AJAX requests.
     // try {
@@ -49,85 +51,148 @@ const debugging = false;
     //     console.log('ya some error occured');
     // }
 
-    // airlinecodessearchblock  
     // await page.waitForSelector('table.datatable');
 
     await page.waitForSelector('div.airlinecodessearchblock');
 
-    // We want to know number of records 
-    const numRecords = await page.evaluate(() => {
+    // We want to know number of records
 
-        let expectedAirlineCodesCount = -1;
+    // const numRecords = await page.evaluate(() => {
+    //     let expectedAirlineCodesCount = -1;
+    //     // Find the element that contains the number of records
+    //     let checkElement = document.querySelector("div.airlinecodessearchblock p.registry-result-text");
+    //     if (!checkElement)
+    //         return expectedAirlineCodesCount;
+    //     // Otherwise, we have element and we expect the innerText to have a format like 'Found 1126 Airline Codes'
+    //     let textRegex = /Found (\d*) Airline Codes/;
+    //     let matches = checkElement.innerText.match(textRegex);
+    //     if (matches)
+    //         return matches[1];
+    //     return expectedAirlineCodesCount;
+    // });
 
-        // Find the element that contains the number of records
-        let checkElement = document.querySelector("div.airlinecodessearchblock p.registry-result-text");
-        
-        if (!checkElement)
-            return expectedAirlineCodesCount;
-        
-        
-        // Otherwise, we have element and we expect the innerText to have a format like 'Found 1126 Airline Codes'
-        let textRegex = /Found (\d*) Airline Codes/;
-        let matches = checkElement.innerText.match(textRegex);
+    const numRecords = await parseAirlineCodes(page);
 
-        if (matches)
-            return matches[1];
-        
-        return expectedAirlineCodesCount;
-    });
+    console.log(`Number of airline codes: ${numRecords}`);
 
-    console.log(numRecords);
+    // We want to know max number of pages
     
-    let data = await page.evaluate(() => {
+    // page.evaluate(() => {
+    //     // Find the element that contains the number of pages
+    //     const pageText = document.querySelector("div.airlinecodessearchblock div.row a.pagination-link:nth-of-type(2)");
+    //     if (pageText)
+    //         return parseInt(pageText.innerText, 10);
+    //     return -1;
+    //     // let expectedAirlineCodesCount = -1;
+    //     // // Find the element that contains the number of records
+    //     // let checkElement = document.querySelector("div.airlinecodessearchblock p.registry-result-text");
+    //     // if (!checkElement)
+    //     //     return expectedAirlineCodesCount;
+    //     // // Otherwise, we have element and we expect the innerText to have a format like 'Found 1126 Airline Codes'
+    //     // let textRegex = /Found (\d*) Airline Codes/;
+    //     // let matches = checkElement.innerText.match(textRegex);
+    //     // if (matches)
+    //     //     return matches[1];
+    //     // return expectedAirlineCodesCount;
+    // });
 
-        // Browser context
-        console.log(`url is ${location.href}`);
-        let datatables = document.querySelectorAll("table.datatable");
+    const maxPage = await parseMaxPage(page);
 
-        // The last we check (tlwc), there are 2 datatables on the page; we want the first one
-        console.log(`Number of datatables: ${datatables.length}`);
+    console.log(`Number of pages: ${maxPage}`);
 
-        let airline_datatable = datatables[0];
+    let pageIndex = 0;
 
-        let header_element_names = [];
-        let expected_header_element_names = [
-            'COMPANY NAME',
-            'COUNTRY / TERRITORY',
-            '2-LETTER CODE',
-            'ACCOUNTING CODE (PAX)',
-            'AIRLINE PREFIX CODE'
-        ];
+    for (pageIndex = 0; pageIndex < maxPage; ) {
 
-        airline_datatable.querySelectorAll('thead tr').forEach(function(tr) {
-            tr.querySelectorAll('td').forEach(function(td) {
-                header_element_names.push(td.innerText);
-            });
-        });
+        try {
+            console.log(`Page index: ${pageIndex} (actual page number: ${pageIndex + 1})`);
 
-        // Compare if header_element_names is the same as we expect
-        let hasExpectedHeaders = header_element_names.length === expected_header_element_names.length 
-            && header_element_names.every((value, index) => value === expected_header_element_names[index]);
+            let response = await page.goto(`https://www.iata.org/en/publications/directories/code-search/?airline.page=${pageIndex + 1}&airline.search=`);
+    
+            // let res = await page.waitForResponse(response => {
+            //     return response.status() === 200;
+            // });
 
-        if (!hasExpectedHeaders) {
-            return; // Stop if we do no have the expected headers; implication here is that the page that we know may have changed
+            // let res = await page.waitForResponse(_ => {});
+            // console.log("OK");
+
+            if (!response.ok())
+            {
+                console.log(`Something is wrong. (received HTTP ${response.status()}); wait for 5 seconds before retrying`);
+                await new Promise(() => setTimeout(() => {}, 5000));
+                continue;
+            }
+
+            await page.waitForSelector('div.airlinecodessearchblock', {timeout: 0});
+    
+            let data = await parseAirlineCodes(page);
+    
+            data.forEach((val, idx , arr) => {
+                console.log(`Length: ${val.length}, [${[...val]}]`);
+                log(`${[...val]}`);
+            })
+
+            pageIndex++;
+        } catch (error) {
+            console.log(error);
+            await new Promise(() => setTimeout(() => {}, 5000));
         }
 
-        let rows = [];
+        
+        // let data = await page.evaluate(() => {
 
-        airline_datatable.querySelectorAll('tbody tr').forEach(function(tr) {
-            let row_data = [];
-            tr.querySelectorAll('td').forEach(function(td) {
-                row_data.push(td.innerText);
-            });
-            rows.push(row_data);
-        });
+        //     // Browser context
+        //     console.log(`url is ${location.href}`);
+        //     let datatables = document.querySelectorAll("table.datatable");
+    
+        //     // The last we check (tlwc), there are 2 datatables on the page; we want the first one
+        //     console.log(`Number of datatables: ${datatables.length}`);
+    
+        //     let airline_datatable = datatables[0];
+    
+        //     let header_element_names = [];
+        //     let expected_header_element_names = [
+        //         'COMPANY NAME',
+        //         'COUNTRY / TERRITORY',
+        //         '2-LETTER CODE',
+        //         'ACCOUNTING CODE (PAX)',
+        //         'AIRLINE PREFIX CODE'
+        //     ];
+    
+        //     airline_datatable.querySelectorAll('thead tr').forEach(function(tr) {
+        //         tr.querySelectorAll('td').forEach(function(td) {
+        //             header_element_names.push(td.innerText);
+        //         });
+        //     });
+    
+        //     // Compare if header_element_names is the same as we expect
+        //     let hasExpectedHeaders = header_element_names.length === expected_header_element_names.length 
+        //         && header_element_names.every((value, index) => value === expected_header_element_names[index]);
+    
+        //     if (!hasExpectedHeaders) {
+        //         return; // Stop if we do no have the expected headers; implication here is that the page that we know may have changed
+        //     }
+    
+        //     let rows = [];
+    
+        //     airline_datatable.querySelectorAll('tbody tr').forEach(function(tr) {
+        //         let row_data = [];
+        //         tr.querySelectorAll('td').forEach(function(td) {
+        //             row_data.push(td.innerText);
+        //         });
+        //         rows.push(row_data);
+        //     });
+    
+        //     console.log(`Number of rows: ${rows.length}`);
 
-        console.log(`Number of rows: ${rows.length}`)
-        rows.forEach((val, idx , arr) => {
-            console.log(`Length: ${val.length}, [${[...val]}]`);
-        })
+        //     rows.forEach((val, idx , arr) => {
+        //         console.log(`Length: ${val.length}, [${[...val]}]`);
+        //     })
+    
+        // });
+    }
+    
 
-    });
     
     // let data = await page.evaluate(() => {
     //     console.log(`url is ${location.href}`);
@@ -171,3 +236,108 @@ const debugging = false;
     console.log("Close browser.");
     await browser.close();
 })();
+
+
+async function parseAirlineCodes(page) {
+    
+    return await page.evaluate(() => {
+
+        let expectedAirlineCodesCount = -1;
+
+        // Find the element that contains the number of records
+        let checkElement = document.querySelector("div.airlinecodessearchblock p.registry-result-text");
+        
+        if (!checkElement)
+            return expectedAirlineCodesCount;
+        
+        // Otherwise, we have element and we expect the innerText to have a format like 'Found 1126 Airline Codes'
+        let textRegex = /Found (\d*) Airline Codes/;
+        let matches = checkElement.innerText.match(textRegex);
+
+        if (matches)
+            return matches[1];
+        
+        return expectedAirlineCodesCount;
+    });
+}
+
+async function parseMaxPage(page) {
+    return await page.evaluate(() => {
+
+        // Find the element that contains the number of pages
+        const pageText = document.querySelector("div.airlinecodessearchblock div.row a.pagination-link:nth-of-type(2)");
+
+        if (pageText)
+            return parseInt(pageText.innerText, 10);
+
+        return -1;
+
+        // let expectedAirlineCodesCount = -1;
+        // // Find the element that contains the number of records
+        // let checkElement = document.querySelector("div.airlinecodessearchblock p.registry-result-text");
+        // if (!checkElement)
+        //     return expectedAirlineCodesCount;
+        // // Otherwise, we have element and we expect the innerText to have a format like 'Found 1126 Airline Codes'
+        // let textRegex = /Found (\d*) Airline Codes/;
+        // let matches = checkElement.innerText.match(textRegex);
+        // if (matches)
+        //     return matches[1];
+        // return expectedAirlineCodesCount;
+    });
+}
+
+async function parseAirlineCodes(page) {
+    return await page.evaluate(() => {
+
+        // Browser context
+        console.log(`url is ${location.href}`);
+        let datatables = document.querySelectorAll("table.datatable");
+
+        // The last we check (tlwc), there are 2 datatables on the page; we want the first one
+        console.log(`Number of datatables: ${datatables.length}`);
+
+        let airline_datatable = datatables[0];
+
+        let header_element_names = [];
+        let expected_header_element_names = [
+            'COMPANY NAME',
+            'COUNTRY / TERRITORY',
+            '2-LETTER CODE',
+            'ACCOUNTING CODE (PAX)',
+            'AIRLINE PREFIX CODE'
+        ];
+
+        airline_datatable.querySelectorAll('thead tr').forEach(function(tr) {
+            tr.querySelectorAll('td').forEach(function(td) {
+                header_element_names.push(td.innerText);
+            });
+        });
+
+        // Compare if header_element_names is the same as we expect
+        let hasExpectedHeaders = header_element_names.length === expected_header_element_names.length 
+            && header_element_names.every((value, index) => value === expected_header_element_names[index]);
+
+        if (!hasExpectedHeaders) {
+            return; // Stop if we do no have the expected headers; implication here is that the page that we know may have changed
+        }
+
+        let rows = [];
+
+        airline_datatable.querySelectorAll('tbody tr').forEach(function(tr) {
+            let row_data = [];
+            tr.querySelectorAll('td').forEach(function(td) {
+                row_data.push(td.innerText);
+            });
+            rows.push(row_data);
+        });
+
+        return rows;
+
+        // console.log(`Number of rows: ${rows.length}`);
+
+        // rows.forEach((val, idx , arr) => {
+        //     console.log(`Length: ${val.length}, [${[...val]}]`);
+        // })
+
+    });
+}
