@@ -10,6 +10,14 @@ npm init -y
 npm i puppeteer
 ```
 
+## Run
+
+node <script-filename>
+
+Example:
+
+node .\index.js
+
 ## Authoring
 
 You can use page.waitForNavigation() as an alternative to jQuery's document.ready() function:
