@@ -119,7 +119,7 @@ const debugging = false;
             if (!response.ok())
             {
                 console.log(`Something is wrong. (received HTTP ${response.status()}); wait for 5 seconds before retrying`);
-                await new Promise(function(resolve) { setTimeout(resolve, 5000) });
+                await new Promise(() => setTimeout(() => {}, 5000));
                 continue;
             }
 
