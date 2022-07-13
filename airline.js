@@ -4,9 +4,25 @@ const fs = require('fs');
 const {EOL} = require('os');
 const { parse } = require('path');
 
-var log = function(message) {
+const log = function(message) {
     fs.writeFile('airline.log', `${message}${EOL}`, { flag: 'a' }, _err=>{ /** Do nothing */});
 }
+
+const csv = function(message) {
+    if (Array.isArray(message)) {
+        message.forEach((m, idx, arr) => {
+            arr[idx] = `"${m.replace(/\"/g, '\"\"')}"`;
+            // if (m.indexOf(',') >= 0) {
+            //     arr[idx] = `"${m.replace(/\"/g, '\"\"')}"`;
+            // } else {
+            //     arr[idx] = m.replace(/\"/g, '\"\"');
+            // }
+        });
+    }
+    debugger;
+    return message;
+}
+
 
 // KIV: The idea here is to create a function that does logging using writestreams (using a readstream as a intermediary).
 // var logstream = fs.createWriteStream('./airline.logstream');
@@ -34,7 +50,13 @@ const debugging = false;
 
     const page = (await browser.pages())[0]; // get reference to first tab in browser
 
-    page.on('console', (msg) => console.log('PAGE LOG:', msg.text()));
+    // set user agent (override the default headless User Agent) -- navigator.userAgent
+    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36');
+
+    // page.on('console', (msg) => console.log('PAGE LOG:', msg.text()));
+    page.on('console', (msg) =>{
+        console.log(`PAGE_LOG(${msg.type()}): ${msg.text()}`);
+    });
 
     // What we will be doing:
     // 1. Go to page (and wait for page to load)
@@ -102,7 +124,7 @@ const debugging = false;
 
     let pageIndex = 0;
 
-    for (pageIndex = 0; pageIndex < maxPage; ) {
+    for (pageIndex = 0; pageIndex < 5; ) {
 
         try {
             console.log(`Page index: ${pageIndex} (actual page number: ${pageIndex + 1})`);
@@ -129,7 +151,7 @@ const debugging = false;
     
             data.forEach((val, idx , arr) => {
                 console.log(`Length: ${val.length}, [${[...val]}]`);
-                log(`${[...val]}`);
+                log(`${csv([...val])}`);
             })
 
             pageIndex++;
@@ -240,7 +262,7 @@ const debugging = false;
 
 async function parseAirlineCodes(page) {
     
-    return await page.evaluate(() => {
+    return page.evaluate(() => {
 
         let expectedAirlineCodesCount = -1;
 
@@ -262,7 +284,7 @@ async function parseAirlineCodes(page) {
 }
 
 async function parseMaxPage(page) {
-    return await page.evaluate(() => {
+    return page.evaluate(() => {
 
         // Find the element that contains the number of pages
         const pageText = document.querySelector("div.airlinecodessearchblock div.row a.pagination-link:nth-of-type(2)");
@@ -287,7 +309,7 @@ async function parseMaxPage(page) {
 }
 
 async function parseAirlineCodes(page) {
-    return await page.evaluate(() => {
+    return page.evaluate(() => {
 
         // Browser context
         console.log(`url is ${location.href}`);
