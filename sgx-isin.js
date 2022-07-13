@@ -19,7 +19,7 @@ const debugging = false;
 
 (async () => {
     const browser = await puppeteer.launch({
-        headless: headlessMode, 
+        headless: headlessMode,
         devtools: debugging,
         defaultViewport: null, // set to null if you want to use the default viewport
         // args:[
@@ -27,7 +27,16 @@ const debugging = false;
         // ]
     });
 
+    const targetPageList = [];
+
+    browser.on('targetcreated', function(t) { // t for Target object
+        console.log(`New '${t.type()}' tab page created.`);
+        targetPageList.push(t);
+    })
+
     const page = (await browser.pages())[0]; // get reference to first tab in browser
+
+    
 
     // set user agent (override the default headless User Agent) -- navigator.userAgent
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36');
@@ -57,16 +66,50 @@ const debugging = false;
     // await page.goto(gotoUrl);
 
     try {
+
+        // const newPagePromise = new Promise(x => browser.once('targetcreated', target => x(target.page())));
+  
+
         //await page.click('widget-research-and-reports-download a.widget-download-list-item-link');
-        await page.click('widget-research-and-reports-download a.widget-download-list-item-link');
+        // await page.click('widget-research-and-reports-download a.widget-download-list-item-link');
+
+        // const newPage = await newPagePromise;
+
+        //await newPage.waitForNetworkIdle();
+
+        // const data = await newPage.evaluate(() => document.querySelector('*').outerHTML);
+
+        // console.log(data);
+
+        // await newPage.waitForResponse(response => {
+        //     console.log(response.status(), response.url());
+        //     console.log(response.request().url());
+        //     return false; // return response.request().resourceType() === 'image';
+        // });
+
+        // use destructuring for easier usage
+        // const [tabOne, tabTwo] = (await browser.pages());
+        // console.log(tabOne);
+        // console.log(tabTwo);
+
+
+        //check that the first page opened this new page:
+        // const newTarget = await browser.waitForTarget(target => target.opener() === pageTarget);
+
+        //get the new page object:
+        // const newPage = await newTarget.page();
+
+        // const pages = await (await browser.pages()).length;
+        // console.log(pages);
+        // console.log(pages.length);
 
         // waitForResponse is not a good wait for this link as it will load multiple elements that are not apparent
         // Uncomment the following chunk to see what I mean:
-        await page.waitForResponse(response => {
-            console.log(response.status(), response.url());
-            console.log(response.request().url());
-            return false; // return response.request().resourceType() === 'image';
-        });
+        // await page.waitForResponse(response => {
+        //     console.log(response.status(), response.url());
+        //     console.log(response.request().url());
+        //     return false; // return response.request().resourceType() === 'image';
+        // });
 
         // await page.waitForNetworkIdle();
 
@@ -75,7 +118,7 @@ const debugging = false;
         // console.log(data);
 
     } catch (error) {
-        console.log("Timeout waiting for hyperlink");
+        console.log("Timeout waiting for hyperlink", error);
     }
 
     // try {
@@ -99,6 +142,13 @@ const debugging = false;
 
     // console.log("response 2:", response);
 
+    targetPageList.forEach((target) => {
+        
+        let page = target.page();
+        console.log(page);
+
+    } );
+
     console.log("Close browser.");
-    await browser.close();
+    // await browser.close();
 })();
