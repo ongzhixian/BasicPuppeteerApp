@@ -2,6 +2,8 @@ NAME                                              STATUS    ISIN CODE           
 3CNERGY LIMITED                                             SG0502000029        502       3Cnergy
 5E RESOURCES LIMITED                                        SGXE78399073        NLC       5E Resources
 8TELECOM INTL HOLDINGS CO LTD                               BMG3087Y2074        AZG       8Telecom
+9R LIMITED                                                  SGXE45420721        1Y1       9R
+9RW270628                                                   SGXN69651119        KJZW      9RW270628
 AAC 5XLONGSOCGEN 230331                                     LU1986496609        DAFW      AAC 5xLongSG230331
 AAC 5XLONGSOCGEN 230620                                     LU2348856001        DAOW      AAC 5xLongSG230620
 AAC 5XLONGSOCGEN 231214                                     LU2184316235        DATW      AAC 5xLongSG231214
@@ -16,6 +18,7 @@ ABJA INV US$300M4.45%N230124                                XS1753594198        
 ABR HOLDINGS LIMITED                                        SG0533000253        533       ABR
 ABTERRA LTD                                                 SG2C12961455        L5I       Abterra^
 ABUNDANCE INTERNATIONAL LTD                                 SG1I02877971        541       Abundance Intl
+ABUNDANTE LIMITED                                           SG1F41856716        570       Abundante
 AC ENER FIN US$300M5.1%N                                    XS2258819874        RKIB      AC Ener n5.1%S
 AC ENER FINUS$110M5.25%N290212                              XS1946107007        IDTB      AC Ener n5.25%290212S
 AC ENER FINUS$225M4.75%N240129                              XS1940840132        OEHB      AC Ener n4.75%240129S
@@ -150,7 +153,7 @@ ALIBABA US$1B2.7%N410209                                    US01609WAY84        
 ALIBABA US$1B3.25%N610209                                   US01609WBA99        MAKB      Alibaba n3.25%610209S
 ALIBABA US$2.55B3.4%N271206                                 US01609WAT99        8CVB      Alibaba n3.4%271206S
 ALIBABA US$700M2.8%N230606                                  US01609WAS17        8CSB      Alibaba n2.8%230606S
-ALIBABA90 MB EPW221202                            PL        SGXN82363049        V8RW      Alibaba90 MB ePW221202
+ALIBABA90 MB EPW221202                                      SGXN82363049        V8RW      Alibaba90 MB ePW221202
 ALIHLTH 5XLONGSOCGEN 231012                                 LU1986502778        DXZW      ALIHLTH 5xLongSG231012
 ALITA RESOURCES LIMITED                                     AU0000031270        40F       Alita Resources
 ALLGREEN S$250M3.15%N250116                                 SGXF82593314        LGPB      Allgreen n3.15%250116S
@@ -1231,9 +1234,9 @@ DYNO US$400M 3.95% N270803                                  XS1657899628        
 EAGLE HOSPITALITY TRUST                                     SGXC28500103        LIW       Eagle HTrust USD
 EASTERNAIR S$500M2%B260715                                  XS2343214040        MRRB      EasternAir b2%260715S
 EASY TACTICUS$265M5.75%N220113                              XS1545743442        67EB      EasyTactic n5.75%220113S
-EASYTACTICUS$1.292B6.5%N250711                    PL        XS2495355674        9KNB      EasyTactic n6.5%250711S
-EASYTACTICUS$1.605B6.5%N280711                    PL        XS2495359403        X1IB      EasyTactic n6.5%280711S
-EASYTACTICUS$2.203B6.5%N270711                    PL        XS2495358009        SQJB      EasyTactic n6.5%270711S
+EASYTACTICUS$1.292B6.5%N250711                              XS2495355674        9KNB      EasyTactic n6.5%250711S
+EASYTACTICUS$1.605B6.5%N280711                              XS2495359403        X1IB      EasyTactic n6.5%280711S
+EASYTACTICUS$2.203B6.5%N270711                              XS2495358009        SQJB      EasyTactic n6.5%270711S
 EASYTACTICUS$375M8.625%N240227                              XS1956169657        TAZB      EasyTacticn8.625%240227S
 EASYTACTICUS$400M8.625%N240305                              XS2125172085        TMSB      EasyTacticn8.625%240305S
 EASYTACTICUS$450M8.125%N230227                              XS1956133893        FCLB      EasyTacticn8.125%230227S
@@ -3661,6 +3664,136 @@ FM CAS S2022R05 C2Y1 N420425                                USU1942YCH28        
 FM CAS S2022R05 C2Y2 N420425                                USU1942YCJ83        EKMB      FMS22R05C2Y2 n420425S
 FM CAS S2022R05 C2Y3 N420425                                USU1942YCK56        9IPB      FMS22R05C2Y3 n420425S
 FM CAS S2022R05 C2Y4 N420425                                USU1942YCU39        ZYWB      FMS22R05C2Y4 n420425S
+FM CAS S2022R06 C1AI1 N420526                               USU1942JAA26        KGFB      FMS22R06C1AI1 n420526S
+FM CAS S2022R06 C1AI2 N420526                               USU1942JAC81        XXDB      FMS22R06C1AI2 n420526S
+FM CAS S2022R06 C1AI3 N420526                               USU1942JAE48        OEJB      FMS22R06C1AI3 n420526S
+FM CAS S2022R06 C1AI4 N420526                               USU1942JAG95        MQMB      FMS22R06C1AI4 n420526S
+FM CAS S2022R06 C1B1 F420526                                USU1942JAQ77        QZMB      FMS22R06C1B1 f420526S
+FM CAS S2022R06 C1B1A F420526                               USU1942JAL80        YNNB      FMS22R06C1B1A f420526S
+FM CAS S2022R06 C1B1B F420526                               USU1942JAN47        DCOB      FMS22R06C1B1B f420526S
+FM CAS S2022R06 C1B1X F420526                               USU1942JCQ59        1YYB      FMS22R06C1B1X f420526S
+FM CAS S2022R06 C1B1Y F420526                               USU1942JCP76        WOHB      FMS22R06C1B1Y f420526S
+FM CAS S2022R06 C1B2 F420526                                USU1942JAR50        YS3B      FMS22R06C1B2 f420526S
+FM CAS S2022R06 C1B2X F420526                               USU1942JCS16        JNHB      FMS22R06C1B2X f420526S
+FM CAS S2022R06 C1B2Y F420526                               USU1942JCR33        W1UB      FMS22R06C1B2Y f420526S
+FM CAS S2022R06 C1BI1 N420526                               USU1942JAT17        VROB      FMS22R06C1BI1 n420526S
+FM CAS S2022R06 C1BI2 N420526                               USU1942JAU89        VCPB      FMS22R06C1BI2 n420526S
+FM CAS S2022R06 C1BI3 N420526                               USU1942JAV62        TUUB      FMS22R06C1BI3 n420526S
+FM CAS S2022R06 C1BI4 N420526                               USU1942JAW46        JHJB      FMS22R06C1BI4 n420526S
+FM CAS S2022R06 C1CI1 N420526                               USU1942JBB99        KQAB      FMS22R06C1CI1 n420526S
+FM CAS S2022R06 C1CI2 N420526                               USU1942JBC72        HYRB      FMS22R06C1CI2 n420526S
+FM CAS S2022R06 C1CI3 N420526                               USU1942JBD55        9JYB      FMS22R06C1CI3 n420526S
+FM CAS S2022R06 C1CI4 N420526                               USU1942JBE39        55EB      FMS22R06C1CI4 n420526S
+FM CAS S2022R06 C1EA1 F420526                               USU1942JAJ35        HAAB      FMS22R06C1EA1 f420526S
+FM CAS S2022R06 C1EA2 F420526                               USU1942JAM63        XDXB      FMS22R06C1EA2 f420526S
+FM CAS S2022R06 C1EA3 F420526                               USU1942JAP94        IORB      FMS22R06C1EA3 f420526S
+FM CAS S2022R06 C1EA4 F420526                               USU1942JAS34        RFHB      FMS22R06C1EA4 f420526S
+FM CAS S2022R06 C1EB1 F420526                               USU1942JAX29        W1SB      FMS22R06C1EB1 f420526S
+FM CAS S2022R06 C1EB2 F420526                               USU1942JAY02        1W4B      FMS22R06C1EB2 f420526S
+FM CAS S2022R06 C1EB3 F420526                               USU1942JAZ76        VIHB      FMS22R06C1EB3 f420526S
+FM CAS S2022R06 C1EB4 F420526                               USU1942JBA17        WS9B      FMS22R06C1EB4 f420526S
+FM CAS S2022R06 C1EC1 F420526                               USU1942JBF04        YCWB      FMS22R06C1EC1 f420526S
+FM CAS S2022R06 C1EC2 F420526                               USU1942JBG86        DNIB      FMS22R06C1EC2 f420526S
+FM CAS S2022R06 C1EC3 F420526                               USU1942JBH69        ETSB      FMS22R06C1EC3 f420526S
+FM CAS S2022R06 C1EC4 F420526                               USU1942JBJ26        HTNB      FMS22R06C1EC4 f420526S
+FM CAS S2022R06 C1ED1 F420526                               USU1942JBK98        LTSB      FMS22R06C1ED1 f420526S
+FM CAS S2022R06 C1ED2 F420526                               USU1942JBL71        51YB      FMS22R06C1ED2 f420526S
+FM CAS S2022R06 C1ED3 F420526                               USU1942JBM54        PHWB      FMS22R06C1ED3 f420526S
+FM CAS S2022R06 C1ED4 F420526                               USU1942JBN38        8ZTB      FMS22R06C1ED4 f420526S
+FM CAS S2022R06 C1ED5 F420526                               USU1942JBP85        OVMB      FMS22R06C1ED5 f420526S
+FM CAS S2022R06 C1EF1 F420526                               USU1942JBQ68        UATB      FMS22R06C1EF1 f420526S
+FM CAS S2022R06 C1EF2 F420526                               USU1942JBR42        WJKB      FMS22R06C1EF2 f420526S
+FM CAS S2022R06 C1EF3 F420526                               USU1942JBS25        Y7GB      FMS22R06C1EF3 f420526S
+FM CAS S2022R06 C1EF4 F420526                               USU1942JBT08        KWKB      FMS22R06C1EF4 f420526S
+FM CAS S2022R06 C1EF5 F420526                               USU1942JBU70        VI6B      FMS22R06C1EF5 f420526S
+FM CAS S2022R06 C1J1 F420526                                USU1942JBV53        9X5B      FMS22R06C1J1 f420526S
+FM CAS S2022R06 C1J2 F420526                                USU1942JBW37        XH5B      FMS22R06C1J2 f420526S
+FM CAS S2022R06 C1J3 F420526                                USU1942JBX10        IOPB      FMS22R06C1J3 f420526S
+FM CAS S2022R06 C1J4 F420526                                USU1942JBY92        TSQB      FMS22R06C1J4 f420526S
+FM CAS S2022R06 C1K1 F420526                                USU1942JBZ67        YKXB      FMS22R06C1K1 f420526S
+FM CAS S2022R06 C1K2 F420526                                USU1942JCA08        5E1B      FMS22R06C1K2 f420526S
+FM CAS S2022R06 C1K3 F420526                                USU1942JCB80        5R1B      FMS22R06C1K3 f420526S
+FM CAS S2022R06 C1K4 F420526                                USU1942JCC63        QUAB      FMS22R06C1K4 f420526S
+FM CAS S2022R06 C1M1 F420526                                USU1942JAB09        ODPB      FMS22R06C1M1 f420526S
+FM CAS S2022R06 C1M2 F420526                                USU1942JAK08        FDOB      FMS22R06C1M2 f420526S
+FM CAS S2022R06 C1M2A F420526                               USU1942JAD64        YSEB      FMS22R06C1M2A f420526S
+FM CAS S2022R06 C1M2B F420526                               USU1942JAF13        SFPB      FMS22R06C1M2B f420526S
+FM CAS S2022R06 C1M2C F420526                               USU1942JAH78        TQRB      FMS22R06C1M2C f420526S
+FM CAS S2022R06 C1M2X F420526                               USU1942JCN29        5O5B      FMS22R06C1M2X f420526S
+FM CAS S2022R06 C1M2Y F420526                               USU1942JCM46        NEHB      FMS22R06C1M2Y f420526S
+FM CAS S2022R06 C1X1 N420526                                USU1942JCD47        XCRB      FMS22R06C1X1 n420526S
+FM CAS S2022R06 C1X2 N420526                                USU1942JCE20        NHCB      FMS22R06C1X2 n420526S
+FM CAS S2022R06 C1X3 N420526                                USU1942JCF94        YJRB      FMS22R06C1X3 n420526S
+FM CAS S2022R06 C1X4 N420526                                USU1942JCG77        VUPB      FMS22R06C1X4 n420526S
+FM CAS S2022R06 C1Y1 N420526                                USU1942JCH50        DXYB      FMS22R06C1Y1 n420526S
+FM CAS S2022R06 C1Y2 N420526                                USU1942JCJ17        XMLB      FMS22R06C1Y2 n420526S
+FM CAS S2022R06 C1Y3 N420526                                USU1942JCK89        YX4B      FMS22R06C1Y3 n420526S
+FM CAS S2022R06 C1Y4 N420526                                USU1942JCL62        9WXB      FMS22R06C1Y4 n420526S
+FM CAS S2022R07 C1AI1 N420625                     PL        USU19450AB88        9WEB      FMS22R07C1AI1 n420625S
+FM CAS S2022R07 C1AI2 N420625                     PL        USU19450AC61        QSGB      FMS22R07C1AI2 n420625S
+FM CAS S2022R07 C1AI3 N420625                     PL        USU19450AD45        SBIB      FMS22R07C1AI3 n420625S
+FM CAS S2022R07 C1AI4 N420625                     PL        USU19450AE28        ORKB      FMS22R07C1AI4 n420625S
+FM CAS S2022R07 C1B1 F420625                      PL        USU19450AF92        KCSB      FMS22R07C1B1 f420625S
+FM CAS S2022R07 C1B1A F420625                     PL        USU19450AG75        FJXB      FMS22R07C1B1A f420625S
+FM CAS S2022R07 C1B1B F420625                     PL        USU19450AH58        UTPB      FMS22R07C1B1B f420625S
+FM CAS S2022R07 C1B1X F420625                     PL        USU19450AJ15        UVFB      FMS22R07C1B1X f420625S
+FM CAS S2022R07 C1B1Y F420625                     PL        USU19450AK87        LXQB      FMS22R07C1B1Y f420625S
+FM CAS S2022R07 C1B2 F420625                      PL        USU19450AL60        GLMB      FMS22R07C1B2 f420625S
+FM CAS S2022R07 C1B2X F420625                     PL        USU19450AN27        5V1B      FMS22R07C1B2X f420625S
+FM CAS S2022R07 C1B2Y F420625                     PL        USU19450AP74        ZGFB      FMS22R07C1B2Y f420625S
+FM CAS S2022R07 C1BI1 N420625                     PL        USU19450AT96        YM2B      FMS22R07C1BI1 n420625S
+FM CAS S2022R07 C1BI2 N420625                     PL        USU19450AU69        IPNB      FMS22R07C1BI2 n420625S
+FM CAS S2022R07 C1BI3 N420625                     PL        USU19450AV43        IYLB      FMS22R07C1BI3 n420625S
+FM CAS S2022R07 C1BI4 N420625                     PL        USU19450AW26        KWJB      FMS22R07C1BI4 n420625S
+FM CAS S2022R07 C1CI1 N420625                     PL        USU19450AX09        KPMB      FMS22R07C1CI1 n420625S
+FM CAS S2022R07 C1CI2 N420625                     PL        USU19450AY81        ZKIB      FMS22R07C1CI2 n420625S
+FM CAS S2022R07 C1CI3 N420625                     PL        USU19450AZ56        9CEB      FMS22R07C1CI3 n420625S
+FM CAS S2022R07 C1CI4 N420625                     PL        USU19450BA96        SRCB      FMS22R07C1CI4 n420625S
+FM CAS S2022R07 C1EA1 F420625                     PL        USU19450BB79        YPEB      FMS22R07C1EA1 f420625S
+FM CAS S2022R07 C1EA2 F420625                     PL        USU19450BC52        VX9B      FMS22R07C1EA2 f420625S
+FM CAS S2022R07 C1EA3 F420625                     PL        USU19450BD36        1N8B      FMS22R07C1EA3 f420625S
+FM CAS S2022R07 C1EA4 F420625                     PL        USU19450BE19        9Z2B      FMS22R07C1EA4 f420625S
+FM CAS S2022R07 C1EB1 F420625                     PL        USU19450BF83        JXUB      FMS22R07C1EB1 f420625S
+FM CAS S2022R07 C1EB2 F420625                     PL        USU19450BG66        GNPB      FMS22R07C1EB2 f420625S
+FM CAS S2022R07 C1EB3 F420625                     PL        USU19450BH40        TLPB      FMS22R07C1EB3 f420625S
+FM CAS S2022R07 C1EB4 F420625                     PL        USU19450BJ06        YROB      FMS22R07C1EB4 f420625S
+FM CAS S2022R07 C1EC1 F420625                     PL        USU19450BK78        WPVB      FMS22R07C1EC1 f420625S
+FM CAS S2022R07 C1EC2 F420625                     PL        USU19450BL51        5XJB      FMS22R07C1EC2 f420625S
+FM CAS S2022R07 C1EC3 F420625                     PL        USU19450BM35        XWTB      FMS22R07C1EC3 f420625S
+FM CAS S2022R07 C1EC4 F420625                     PL        USU19450BN18        PMCB      FMS22R07C1EC4 f420625S
+FM CAS S2022R07 C1ED1 F420625                     PL        USU19450BP65        WI5B      FMS22R07C1ED1 f420625S
+FM CAS S2022R07 C1ED2 F420625                     PL        USU19450BQ49        ORTB      FMS22R07C1ED2 f420625S
+FM CAS S2022R07 C1ED3 F420625                     PL        USU19450BR22        OGSB      FMS22R07C1ED3 f420625S
+FM CAS S2022R07 C1ED4 F420625                     PL        USU19450BS05        DXTB      FMS22R07C1ED4 f420625S
+FM CAS S2022R07 C1ED5 F420625                     PL        USU19450BT87        GGUB      FMS22R07C1ED5 f420625S
+FM CAS S2022R07 C1EF1 F420625                     PL        USU19450BU50        1O7B      FMS22R07C1EF1 f420625S
+FM CAS S2022R07 C1EF2 F420625                     PL        USU19450BV34        9VXB      FMS22R07C1EF2 f420625S
+FM CAS S2022R07 C1EF3 F420625                     PL        USU19450BW17        WB8B      FMS22R07C1EF3 f420625S
+FM CAS S2022R07 C1EF4 F420625                     PL        USU19450BX99        RPWB      FMS22R07C1EF4 f420625S
+FM CAS S2022R07 C1EF5 F420625                     PL        USU19450BY72        HZHB      FMS22R07C1EF5 f420625S
+FM CAS S2022R07 C1J1 F420625                      PL        USU19450CL43        KYAB      FMS22R07C1J1 f420625S
+FM CAS S2022R07 C1J2 F420625                      PL        USU19450CM26        HUXB      FMS22R07C1J2 f420625S
+FM CAS S2022R07 C1J3 F420625                      PL        USU19450CN09        OYGB      FMS22R07C1J3 f420625S
+FM CAS S2022R07 C1J4 F420625                      PL        USU19450CP56        KWMB      FMS22R07C1J4 f420625S
+FM CAS S2022R07 C1K1 F420625                      PL        USU19450CQ30        5M4B      FMS22R07C1K1 f420625S
+FM CAS S2022R07 C1K2 F420625                      PL        USU19450CR13        R69B      FMS22R07C1K2 f420625S
+FM CAS S2022R07 C1K3 F420625                      PL        USU19450CS95        9LDB      FMS22R07C1K3 f420625S
+FM CAS S2022R07 C1K4 F420625                      PL        USU19450CT78        VYQB      FMS22R07C1K4 f420625S
+FM CAS S2022R07 C1M1 F420625                      PL        USU19450BZ48        LFQB      FMS22R07C1M1 f420625S
+FM CAS S2022R07 C1M2 F420625                      PL        USU19450CB60        OZIB      FMS22R07C1M2 f420625S
+FM CAS S2022R07 C1M2A F420625                     PL        USU19450CC44        TIWB      FMS22R07C1M2A f420625S
+FM CAS S2022R07 C1M2B F420625                     PL        USU19450CD27        JQCB      FMS22R07C1M2B f420625S
+FM CAS S2022R07 C1M2C F420625                     PL        USU19450CE00        FDQB      FMS22R07C1M2C f420625S
+FM CAS S2022R07 C1M2X F420625                     PL        USU19450CF74        NETB      FMS22R07C1M2X f420625S
+FM CAS S2022R07 C1M2Y F420625                     PL        USU19450CG57        95AB      FMS22R07C1M2Y f420625S
+FM CAS S2022R07 C1X1 N420625                      PL        USU19450CU42        PKWB      FMS22R07C1X1 n420625S
+FM CAS S2022R07 C1X2 N420625                      PL        USU19450CV25        XKNB      FMS22R07C1X2 n420625S
+FM CAS S2022R07 C1X3 N420625                      PL        USU19450CW08        YA0B      FMS22R07C1X3 n420625S
+FM CAS S2022R07 C1X4 N420625                      PL        USU19450CX80        5L6B      FMS22R07C1X4 n420625S
+FM CAS S2022R07 C1Y1 N420625                      PL        USU19450CY63        YU3B      FMS22R07C1Y1 n420625S
+FM CAS S2022R07 C1Y2 N420625                      PL        USU19450CZ39        MAPB      FMS22R07C1Y2 n420625S
+FM CAS S2022R07 C1Y3 N420625                      PL        USU19450DA78        WM6B      FMS22R07C1Y3 n420625S
+FM CAS S2022R07 C1Y4 N420625                      PL        USU19450DB51        44QB      FMS22R07C1Y4 n420625S
 FONTERRA EUR350M0.75%N241108                                XS1515173315        61KB      Fonterra n0.75%241108S
 FOOD EMPIRE HOLDINGS LIMITED                                SG1I44882534        F03       Food Empire
 FOODSVC EUR300M5.5%N270121A                                 XS2432310436        8O9B      Food Svc n5.5%270121A
@@ -4110,6 +4243,8 @@ HSCEI 7XLONGSOCGEN 240424                                   LU2348853164        
 HSCEI 7XLONGUBS 250430                                      CH1169123812        EBEW      HSCEI 7xLongUB250430
 HSCEI 7XSHORTSOCGEN 231215                                  LU2184316664        CXRW      HSCEI 7xShortSG231215
 HSCEI 7XSHORTUBS 250430                                     CH1169123820        WTNW      HSCEI 7xShortUB250430
+HSI 18400 MB EPW220929                            PL        SGXN44510521        49JW      HSI 18400MBePW220929
+HSI 18800 MB EPW220830                            PL        SGXN20260356        LKQW      HSI 18800MBePW220830
 HSI 19400 MB EPW220728                                      SGXN98440021        FFRW      HSI 19400MBePW220728
 HSI 19600 MB EPW220830                                      SGXN45826546        SBEW      HSI 19600MBePW220830
 HSI 20000 MB ECW220728                                      SGXN41165840        YL8W      HSI 20000MBeCW220728
@@ -4120,6 +4255,7 @@ HSI 21000 MB EPW220728                                      SGXN83515332        
 HSI 21200 MB ECW220830                                      SGXN11138868        CUHW      HSI 21200MBeCW220830
 HSI 21400 MB EPW220830                                      SGXN17842745        UHHW      HSI 21400MBePW220830
 HSI 21600 MB ECW220728                                      SGXN31429321        UDIW      HSI21600MBeCW220728
+HSI 21800 MB ECW220929                            PL        SGXN81622999        PPGW      HSI 21800MBeCW220929
 HSI 22000 MB ECW220830                                      SGXN44093288        XJHW      HSI 22000MBeCW220830
 HSI 22600 MB ECW220728                                      SGXN13493410        UUJW      HSI22600MBeCW220728
 HSI 23000 MB ECW220830                                      SGXN52819061        UHGW      HSI 23000MBeCW220830
@@ -4154,6 +4290,7 @@ HUANENG POWER INTL ADR 10                                   US4433041005        
 HUATIONG GLOBAL LIMITED                                     SG1AF2000003        41B       Huationg Global
 HUAXIN CEM US$300M2.25%B251119                              XS2256737722        5Z6B      Huaxin Cem b2.25%251119S
 HUIJINGHLDGUS$138M12.5%N220721                              XS2364281506        KHPB      HuijingHldgn12.5%220721S
+HUIJINGUS$107.6M12.5%N230718                      PL        XS2496487286        MRZB      HuijingHldgn12.5%230718S
 HUNT OIL US$600M6.375%N280601A                              US445640AB18        CYRB      HuntOil n6.375%280601A
 HUNT OIL US$600M6.375%N280601R                              USP5300PAB96        XHFB      HuntOil n6.375%280601R
 HUTCHISON PORT HOLDINGS TRUST                               SG2D00968206        NS8U      HPH Trust USD
@@ -4946,6 +5083,8 @@ KOREAHSE EUR500M0.1%B240618A                                XS1999732826        
 KOREAHSE EUR500M0.1%B240618R                                XS1999730374        JPUB      KorHse b0.1%240618R
 KOREAHSE EUR500M0.75%B231030A                               XS1900543494        YMNB      KorHse b0.75%231030A
 KOREAHSE EUR500M0.75%B231030R                               XS1900542926        JKTB      KorHse b0.75%231030R
+KOREAHSE EUR500M1.963%B260719A                              XS2502844116        44DB      KorHse b1.963%260719A
+KOREAHSE EUR500M1.963%B260719R                              XS2502879096        1ZLB      KorHse b1.963%260719R
 KOREAHSE EUR550M0.258%B281027A                              XS2388378122        EGSB      KorHse b0.258%281027A
 KOREAHSE EUR550M0.258%B281027R                              XS2388377827        HVZB      KorHse b0.258%281027R
 KOREAHSE EUR600M0.723%B250322A                              XS2442748385        OYLB      KorHse b0.723%250322A
@@ -5112,8 +5251,8 @@ LEVC FIN US$400M1.375%N240325                               XS2295883206        
 LEY CHOON GROUP HLDG LIMITED                                SG2F02983607        Q0X       Ley Choon
 LG CHEM EUR500M0.5%N230415A                                 XS1972559352        W5YB      LG Chem n0.5%230415A
 LG CHEM EUR500M0.5%N230415R                                 XS1972557737        YBJB      LG Chem n0.5%230415R
-LG CHEM USD300M4.375%N250714A                     PL        US501955AE89        Y4OB      LG Chem n4.375%250714A
-LG CHEM USD300M4.375%N250714R                     PL        USY52758AG77        XKEB      LG Chem n4.375%250714R
+LG CHEM USD300M4.375%N250714A                               US501955AE89        Y4OB      LG Chem n4.375%250714A
+LG CHEM USD300M4.375%N250714R                               USY52758AG77        XKEB      LG Chem n4.375%250714R
 LG CHEM USD500M1.375%N260707A                               US501955AC24        Z7OB      LG Chem n1.375%260707A
 LG CHEM USD500M1.375%N260707R                               USY52758AE20        FKDB      LG Chem n1.375%260707R
 LG CHEM USD500M2.375%N310707A                               US501955AD07        KPDB      LG Chem n2.375%310707A
@@ -5516,7 +5655,6 @@ MIZUHO FIN US$300MF240908                                   US60687YBM03        
 MIZUHO FIN US$400MF240710                                   US60687YBG35        OPQB      MizuhoF f240710S
 MIZUHO FIN US$500M F230913                                  US60687YBB48        RDUB      MizuhoF f230913S
 MIZUHO FIN US$500M2.591%N310525                             US60687YBE86        ZO8B      MizuhoF n2.591%310525S
-MIZUHO FIN US$500MF230716                                   US60687YAY59        XPSB      MizuhoF f230716S
 MIZUHO FIN US$650MF240911                                   US60687YAU38        LEAB      MizuhoF f240911S
 MIZUHO FIN US$750M2.226%N260525                             US60687YBD04        9L9B      MizuhoF n2.226%260525S
 MIZUHO FIN US$750MF260522                                   US60687YBY41        FGXB      MizuhoF f260522S
@@ -5547,7 +5685,6 @@ MIZUHOFIN US$1.3B4.018%N280305                              US60687YAR09        
 MIZUHOFIN US$1.4B1.234%N270522                              US60687YBP34        QJWB      MizuhoF n1.234%270522S
 MIZUHOFIN US$1.5B2.953%N220228                              US60687YAH27        6D9B      MizuhoF n2.953%220228S
 MIZUHOFIN US$1B2.564%N310913                                US60687YBU29        VCQB      MizuhoF n2.564%310913S
-MIZUHOFIN US$1B2.721%N230716                                US60687YAV11        JVNB      MizuhoF n2.721%230716S
 MIZUHOFIN US$500M2.839%N250716                              US60687YAW93        YYAB      MizuhoF n2.839%250716S
 MIZUHOFIN US$500M2.869%N300913                              US60687YBA64        DWLB      MizuhoF n2.869%300913S
 MIZUHOFIN US$500M3.261%N300522                              US60687YBX67        XAYB      MizuhoFn3.261%300522S
@@ -6072,12 +6209,14 @@ POWERFIN US$750M3.95%N300423A                               US73928QAB41        
 POWERFIN US$750M3.95%N300423R                               US73928RAB24        YNJB      PowerFin n3.95%300423R
 POWERLONG HK$1.99B Z190211                                  XS1766830159        8HRB      Powerlong z190211S
 POWERLONG US$100M5%N221003                                  XS2393794198        EJKB      Powerlong n5%221003S
+POWERLONG US$169.770M4%N230714                              XS2500700633        MXXB      Powerlong n4%230714S
 POWERLONG US$170M6.95%N230723                               XS2030333384        V7HB      Powerlongn6.95%230723S
 POWERLONG US$200M4%N220725                                  XS2368100033        QWYB      Powerlong n4%220725S
 POWERLONG US$200M4.9%N260513                                XS2341882913        V5BB      Powerlong n4.9%260513S
 POWERLONG US$200M5.95%N200719                               XS1645451565        77PB      Powerlong 5.95%n200719S
 POWERLONG US$200M5.95%N250430                               XS2250030090        XB9B      Powerlong n5.95%250430S
 POWERLONG US$200M6.25%N240810                               XS2213954766        SJIB      Powerlong n6.25%240810S
+POWERLONG US$262M7.125%N240115                              XS2500700716        YDOB      Powerlong n7.125%240115S
 POWERLONG US$300M7.125%N221108                              XS2078556342        KKLB      Powerlongn7.125%221108S
 POWERMATIC DATA SYSTEMS LTD                                 SG1BF0000003        BCY       Powermatic Data
 PRIME BLOOMUS$200M6.95%N220705                              XS1636491794        76QB      Prime Bloomn6.95%220705S
@@ -7027,6 +7166,7 @@ SUNACCHINAUS$450M8.35%N230419                               XS1810024338        
 SUNACCHINAUS$540M6.5%N250110                                XS2100444772        V2CB      Sunac n6.5%250110S
 SUNACCHUS$650M7.5%N240201                                   XS2075937297        YBBB      Sunac n7.5%240201S
 SUNACCHUS$750M7.95%N231011                                  XS1981089284        RGYB      Sunac n7.95%231011S
+SUNKWAN US$222M12.25%N230717                      PL        XS2502819274        9AGB      Sunkwan n12.25%230717S
 SUNMOON FOOD COMPANY LIMITED                                SG1AA2000004        AAJ       SunMoonFood
 SUNNY 5XLONGSOCGEN 230329                                   LU2267121940        DVJW      Sunny 5xLongSG230329
 SUNNY 5XLONGSOCGEN 230620                                   LU2348855961        DIIW      Sunny 5xLongSG230620
@@ -7241,7 +7381,6 @@ THETA CAP US$325M8.125%N250122                              XS2099273737        
 THETA CAP US$425M6.75%N261031                               XS1506085114        61AB      ThetaCap n6.75%261031S
 THETA CAPITAL US$150M7%N190516                              XS0780192471        2DBB      ThetaCap 7%190516S
 THOMSON MED S$175M4.05%N250128                              SGXF89249654        RMEB      ThomsonM n4.05%250128S
-THOMSON MED S$225M4.8%N220718                               SGXF90488481        YRYB      ThomsonM n4.8%220718S
 THOMSON MEDICAL GROUP LIMITED                               SG1M49904634        A50       Thomson Medical
 THREEGORGESUS$1B 3.15%260602A                               US88556LAC00        4E1B      ThreeGorgesn3.15%260602A
 THREEGORGESUS$1B 3.15%260602R                               USG8850LAC49        4E0B      ThreeGorgesn3.15%260602R
@@ -7300,7 +7439,6 @@ TRANDEGAS US$750M5.55%N281101A                              US89387YAC57        
 TRANDEGAS US$750M5.55%N281101R                              USP93077AC28        JQFB      TranDeGas n5.55%281101R
 TRANSASIA AIR US$75M CB181129                               XS0979033106        2O1B      TransAsia Air cb181129S
 TRANS-CHINA AUTOMOTIVE HOLDINGS LIMITED                     KYG9005M1006        VI2       TC Auto
-TRANSIT-MIXED CONCRETE LTD                                  SG1F41856716        570       Transit Concrete
 TRANSJAMA US$225M5.75%N361010A                              US893727AA57        VQ1B      TransJama n5.75%361010A
 TRANSJAMA US$225M5.75%N361010R                              USP92649AA39        LIPB      TransJama n5.75%361010R
 TRANSURBAN EUR350M1.701%N340703                             XS2021470898        KCPB      Transurban1.701%340701S
@@ -7497,8 +7635,6 @@ VIGOROUS US$300M3.625%N240528                               XS1994698196        
 VIGOROUS US$300M4.25%N290528                                XS1994698436        NMIB      Vigorous n4.25%290528S
 VIGOROUS US$500M4.375%N230910                               XS1873964842        VGZB      Vigorous n4.375%230910S
 VIGOROUS US$600M2.75%N250602                                XS2180856440        DNUB      Vigorous n2.75%250602S
-VIKING OFFSHORE & MA W270628                                SGXN69651119        KJZW      VikingW270628
-VIKING OFFSHORE & MARINE LTD                                SGXE45420721        1Y1       VikingOffshore
 VINGROUPUS$200M11.625%N180507A                              US92743JAB35        2L6B      Vingroup n11.625%180507A
 VINGROUPUS$200M11.625%N180507R                              USY9383WAB64        2L5B      Vingroup n11.625%180507R
 VINGROUPUS$500M3%EB260420                                   XS2332809412        VTIB      Vingroup eb3%260420S

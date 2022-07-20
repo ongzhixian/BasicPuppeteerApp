@@ -40,6 +40,8 @@ const debugging = false;
     // set user agent (override the default headless User Agent) -- navigator.userAgent
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36');
 
+    // https://www.six-group.com/en/products-services/the-swiss-stock-exchange/market-data/shares/companies.html
+    // https://www.six-group.com/sheldon/equity_issuers/v1/equity_issuers.csv
     await page.goto('https://www.sgx.com/research-education/securities');
 
     await page.waitForSelector('widget-research-and-reports-download a.widget-download-list-item-link');
