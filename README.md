@@ -8,6 +8,8 @@ A basic puppeteer console application.
 ```
 npm init -y
 npm i puppeteer
+
+npm install amqplib
 ```
 
 ## Run
